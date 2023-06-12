@@ -129,6 +129,11 @@ class RollbarSourceMapPlugin {
       throw new _verror.default(err, errMessage);
     }
 
+    console.log(`**** access_token: ${this.accessToken}`);
+    console.log(`**** version: ${this.version}`);
+    console.log(`**** minified_url: ${this.getPublicPath(sourceFile)}`);
+    console.log(`**** source_map: ${path}`);
+    console.log(`**** getSource: ${sourceMapSource}`);
     const form = new _formData.default();
     form.append('access_token', this.accessToken);
     form.append('version', this.version);
