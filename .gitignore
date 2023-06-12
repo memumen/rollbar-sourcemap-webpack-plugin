@@ -1,8 +1,9 @@
 node_modules
-dist
 tmp
 *.log
 .env
 .eslintcache
 .nyc_output
 coverage
+Dockerfile
+docker-compose.yml
