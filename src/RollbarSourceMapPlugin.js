@@ -61,6 +61,7 @@ class RollbarSourceMapPlugin {
 
   getSource(compilation, name) {
     const path = this.getAssetPath(compilation, name);
+    console.log(`**** getSource: ${path}`);
     return fs.readFile(path, { encoding: 'utf-8' });
   }
 
@@ -114,6 +115,8 @@ class RollbarSourceMapPlugin {
     } catch (err) {
       throw new VError(err, errMessage);
     }
+
+
 
     const form = new FormData();
     form.append('access_token', this.accessToken);
